@@ -4,8 +4,9 @@ import fetchCountries from "./js/fetchCountries";
 import { renderCountryList, renderCountryCard } from "./js/render";
 import "./js/pnotify-cfg";
 import { error } from "@pnotify/core";
+import debounce from "lodash.debounce";
 
-const debounce = require("lodash.debounce");
+// const debounce = require("lodash.debounce");
 
 refs.searchForm.addEventListener("input", debounce(onSearch, 500));
 
